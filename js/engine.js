@@ -95,6 +95,8 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+        player.detectCollisions(allEnemies);
+        player.detectGemCollisions(allGem);
     }
 
     /* This function initially draws the "game level", it will then call
@@ -150,6 +152,10 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
+        allGem.forEach(function(x) {
+            x.render(ctx);
+        });
+
 
         player.render();
     }
@@ -171,7 +177,13 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/Gem Blue.png',
+        'images/Gem Orange.png',
+        'images/Gem Green.png',
+
+
+
     ]);
     Resources.onReady(init);
 

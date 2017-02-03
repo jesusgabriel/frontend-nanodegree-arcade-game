@@ -58,7 +58,7 @@ Player.prototype.render = function() {
       if(this.dead == true){
         ctx.strokeText("GAME OVER:",300,300)
     }else {
-      ctx.strokeText("SCORE:" + this.score,20,100)
+      ctx.strokeText("SCORE: " + this.score + " Ptos" ,20,100)
     }
 
 
